@@ -8,11 +8,10 @@
     html, body {
       margin: 0;
       padding: 30px;
-      background: #ffffff;
+      background: #ffffff !important;
       font-family: sans-serif;
-      overflow: hidden;
+      overflow: hidden !important;
     }
-    /* 스크롤 제거 */
     ::-webkit-scrollbar {
       display: none;
     }
@@ -69,9 +68,9 @@
           const preview = description.length > 200 ? description.slice(0, 200) + "..." : description;
 
           box.innerHTML = `
-            <div class="blog-title">\${item.title}</div>
-            <div class="blog-desc">\${preview}</div>
-            <a class="blog-link" href="\${item.link}" target="_blank">글 보기 →</a>
+            <div class="blog-title">${item.title}</div>
+            <div class="blog-desc">${preview}</div>
+            <a class="blog-link" href="${item.link}" target="_blank">글 보기 →</a>
           `;
           feed.appendChild(box);
         });
